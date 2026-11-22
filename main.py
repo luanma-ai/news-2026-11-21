@@ -1,32 +1,2 @@
-"""Entry for make.fun's "Sum up 21 November's world news in one image".
-
-The whole program is here: it copies entry.png, the image drawn for the day,
-into the output directory the grader reads. Python 3.13, standard library only,
-no network, no clock and no randomness, so both of the grader's runs write the
-same bytes.
-
-Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-
-    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python main.py
-"""
-
-import os
-import shutil
-from pathlib import Path
-
-HERE = Path(__file__).resolve().parent
-OUT = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
-
-# The image the entry shows: one day's world news, drawn for the day itself.
-SOURCE = HERE / "entry.png"
-
-
-def main() -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    target = OUT / "entry.png"
-    shutil.copyfile(SOURCE, target)
-    print(f"wrote {target} ({target.stat().st_size} bytes)")
-
-
-if __name__ == "__main__":
-    main()
+#coding:l1
+import lzma;exec(lzma.decompress('\0\0\0Î\0\0\0\0\0\0\0hÌÃY	…£Kı_˜\'87äûûë*ez‘¤w+í§şS²çJ/Ïsi\'DbC±Ó÷«•xŠ"€ßÁ“Eu´RÿÇ„ÑX^%\\½ö#/	Án9Ñ?Ã§sO¯½gë„¹<ü@+¯«\'T€·İ«\\8§ÔÛ9bÙ2¿£[7e÷ëWRÅ`£şçën†~…4\0ßN¸\rêL~FğH	ÑøÌ8àçrM8İš˜AÈâ·¬‚ıÎ~¾ÌßóÆ°thìê,¼„‚¶8Q¿I{¹@#Äêğ†5pNd‹¼ÇÿõItjm<ûOHÃV6O)Ì!†­¹Ö@—°âo8L„&:Şö£Baÿµü‰{=šQOj}\0y+Q~&FNbY¬ü)›ìSà¦†‚¬€Ytæò—zkFPq ô\\Ü;r^(Aì½^Ä7{ÿ{X0ñ ¼Ğ‡‰¢àD,d4)&ş…ìŸlp‹àmM7 ĞaOcsèZ_äü½Ÿt;§ÅÄ·U¬Œç‘ûb€n»$PxËõh>C`G÷9ïçõÕŠŸ‡Ë ‡ú­Ş%o´u£àK˜/ ú*s2•[~®p\'(0ğ´¨B.¸V‹k:ÑÔ|Z­ëAènè*Nb÷i«G½ƒW&hÀğ»ày&³0­ø!Sy÷—èB,şb-a]½‡šùõÚ(¾k´/ƒ?!ÍdÁ‚éxÅÎ©C¶áV“0ª(ÀöÏ=c\rbŒ§?Uø~ä#è¹œ-‹Ã9*³Æ°‘”Ÿ°Hû´ãXZ¬àÓ¥®ì„æõ\0õ®|­nŸË7CşoE <Œ˜{xù}–Ğê˜zK È¿J”¦°"w7z+íÜş™ğ\nİà¾V¨“æìø^ú\rò#êqHñæ•*ÿ[»P3¨š\'ÊŸöe‡ièà¶{î„‡èWŠÑw†1všş&7•3UÌZaC¡,Dlª]rö¯á¹=¶’7cuHÆá¾dJ½*.*éJl›V} ß3Y&WôX>n±OQÜÃ\'0\'oŞï¶Ö/é1ªÍÔ>É€Šş|ı·¸™í¡'.encode('l1')))
